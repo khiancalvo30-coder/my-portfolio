@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shadow Monarch — Status Window</title>
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+  <!-- particles using your uploaded snowflake image -->
+  <div class="particles" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">SHADOW SYSTEM</div>
+      <div class="status-pill">Online</div>
+    </header>
+
+    <main class="system-grid">
+      <!-- Left: Profile / Portrait -->
+      <aside class="panel profile-panel">
+        <div class="panel-title">PROFILE</div>
+        <div class="portrait-wrap">
+          <img src="profile.jpg" alt="Profile" class="portrait" />
+        </div>
+
+        <div class="basic-info">
+          <div class="name">Khian Harvey Calvo</div>
+          <div class="job">Job: <span>IT Student</span></div>
+          <div class="lvl">Level: <span class="glow">1</span></div>
+        </div>
+
+        <div class="hpmp">
+          <div class="stat-row">
+            <div class="label">HP</div>
+            <div class="bar">
+              <div class="bar-fill hp-fill" style="width:85%"></div>
+            </div>
+            <div class="value">85 / 100</div>
+          </div>
+          <div class="stat-row">
+            <div class="label">MP</div>
+            <div class="bar">
+              <div class="bar-fill mp-fill" style="width:60%"></div>
+            </div>
+            <div class="value">60 / 100</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Center: Stats & Skills -->
+      <section class="panel stats-panel">
+        <div class="panel-title">STATUS WINDOW</div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-name">Strength</div>
+            <div class="stat-value">10</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-name">Agility</div>
+            <div class="stat-value">12</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-name">Intelligence</div>
+            <div class="stat-value">15</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-name">Endurance</div>
+            <div class="stat-value">11</div>
+          </div>
+        </div>
+
+        <div class="skills-block">
+          <div class="block-title">Skills</div>
+          <ul>
+            <li>HTML — Familiar</li>
+            <li>CSS — Familiar</li>
+            <li>JavaScript — Learning</li>
+            <li>Python — Learning</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Right: Hobbies / Education / Contact -->
+      <aside class="panel info-panel">
+        <div class="panel-title">SYSTEM INFO</div>
+
+        <div class="info-section">
+          <div class="block-title small">HOBBIES</div>
+          <ul class="info-list">
+            <li>Playing Mobile Games</li>
+            <li>Watching Movies</li>
+            <li>Drawing</li>
+            <li>Playing Basketball</li>
+          </ul>
+        </div>
+
+        <div class="info-section">
+          <div class="block-title small">EDUCATION</div>
+          <p class="school"><strong>High School & Senior High School:</strong><br>
+            Juan Pamplona National High School</p>
+        </div>
+
+        <div class="info-section contact">
+          <div class="block-title small">CONTACT</div>
+          <p>Email: khiancalvo30@gmail.com</p>
+          <p>Phone: +63 994 342 7889</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      © 2025 Khian Harvey Calvo — Shadow Monarch UI
+    </footer>
+  </div>
+
+  <!-- minimal script for subtle level glow pulse -->
+  <script>
+    (function(){
+      const lvlEl = document.querySelector('.lvl .glow');
+      let t = 0;
+      setInterval(() => {
+        t = (t + 0.05) % (2 * Math.PI);
+        const s = 1 + 0.03 * Math.sin(t * 2);
+        lvlEl.style.transform = `scale(${s})`;
+      }, 40);
+    })();
+  </script>
+</body>
+</html>
